@@ -1,0 +1,1 @@
+C:\Users\Astana\Desktop\MyPrograms\pages_count\.venv\Scripts\python.exe C:\Users\Astana\Desktop\MyPrograms\pages_count\main.py
