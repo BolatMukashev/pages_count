@@ -32,7 +32,7 @@ from textual.worker import Worker, WorkerState
 # ─────────────────────────────────────────────
 
 IMAGE_EXTENSIONS = {".jpeg", ".jpg", ".png", ".tiff", ".tif", ".webp"}
-DOC_EXTENSIONS   = {".pdf", ".docx"}
+DOC_EXTENSIONS   = {".pdf", ".docx", ".doc"}
 ALL_EXTENSIONS   = DOC_EXTENSIONS | IMAGE_EXTENSIONS
 
 
@@ -48,7 +48,7 @@ class PageCounter:
         suffix = path.suffix.lower()
         if suffix == ".pdf":
             return self._get_pdf_pages(path)
-        elif suffix == ".docx":
+        elif suffix == ".docx" or suffix == ".doc":
             return self._get_docx_pages(path)
         elif suffix in IMAGE_EXTENSIONS:
             return self._get_image_pages(path)
